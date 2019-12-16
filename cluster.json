@@ -1,0 +1,24 @@
+{
+  "name": "pool4",
+  "vmSize": "Standard_D2_v2",
+  "maxTasksPerNode": 2,
+  "poolSize": {
+    "dedicatedNodes": {
+      "min": 0,
+      "max": 0
+    },
+    "lowPriorityNodes": {
+      "min": 5,
+      "max": 20
+    },
+    "autoscaleFormula": "QUEUE"
+  },
+  "containerImage": "mavelli/rocker-bayesian",
+  "rPackages": {
+    "cran": [],
+    "github": ["BrandonEdwards/bbsBayes"],
+    "bioconductor": []
+  },
+  "commandLine": [],
+  "subnetId": ""
+}
